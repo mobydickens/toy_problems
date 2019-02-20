@@ -1,8 +1,0 @@
-// LEVEL 7
-// check if passed in number is -0. New ES2015 feature allows this check with Object.is
-function isNegativeZero(n) {
-  return Object.is(-0, n)
-}
-
-
-
