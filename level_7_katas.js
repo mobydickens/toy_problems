@@ -62,29 +62,38 @@
 //   return count;
 // };
 
-
+// Count the number of times a letter is used and return IN ORDER
 var orderedCount = function (text) {
   // Implement me!
-  console.log(text);
   let arrayOfArrays = [];
   let myObj = {};
   for(let i = 0; i<text.length; i++) {
-    console.log(text[i])
     if(myObj.hasOwnProperty(text[i])) {
       myObj[text[i]] += 1;
     } else {
       myObj[text[i]] = 1;
-    }  
+    } 
   }
-  console.log(myObj);
-  for(let key in myObj) {
-    let array = [];
-    array.push(key);
-    array.push(myObj[key]);
-    arrayOfArrays.push(array);
+  for(let i = 0; i<text.length; i++) {
+    for(let key in myObj) {
+      let array = [];
+      if(key === text[i]) {
+        array.push(key);
+        array.push(myObj[key]);
+        arrayOfArrays.push(array);
+      }
+    }
   }
-  console.log(arrayOfArrays);
-  return arrayOfArrays;
+  let unique = [];
+  let usedLetters = [];
+  
+  for(let i = 0; i<arrayOfArrays.length;i++) {
+    if(usedLetters.includes(arrayOfArrays[i][0])) {
+      continue;
+    } else {
+      unique.push(arrayOfArrays[i]);
+    }
+    usedLetters.push(arrayOfArrays[i][0]);
+  }
+  return unique;
 }
-
-console.log(orderedCount("212"));
