@@ -116,3 +116,12 @@ function accum(s) {
     return newArray.join("-");
 }
 
+// Find min and max
+function highAndLow(numbers){
+  let arrNums = numbers.split(" ");
+  let min = Math.min(...arrNums);
+  let max = Math.max(...arrNums);
+  let arr = [];
+  arr.push(max,min);
+  return arr.join(" ");
+}
