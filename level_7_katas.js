@@ -64,7 +64,6 @@
 
 // Count the number of times a letter is used and return IN ORDER
 var orderedCount = function (text) {
-  // Implement me!
   let arrayOfArrays = [];
   let myObj = {};
   for(let i = 0; i<text.length; i++) {
@@ -97,3 +96,23 @@ var orderedCount = function (text) {
   }
   return unique;
 }
+
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy" <- example
+function accum(s) {
+  console.log(s);
+	let split = s.split("");
+  let newArray = split.map((letter, i) => {
+    let stringArray = [];
+    stringArray.push(letter.toUpperCase());
+    if(i === 0) {
+      return stringArray.join("");;
+    } else {
+      for(let iterations = 0; iterations < i ; iterations ++ ) {
+        stringArray.push(letter.toLowerCase());
+      }
+      return stringArray.join("");;
+    }
+  });
+    return newArray.join("-");
+}
+
