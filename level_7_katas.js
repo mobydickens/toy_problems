@@ -99,7 +99,6 @@ var orderedCount = function (text) {
 
 // accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy" <- example
 function accum(s) {
-  console.log(s);
 	let split = s.split("");
   let newArray = split.map((letter, i) => {
     let stringArray = [];
@@ -132,3 +131,7 @@ function findShort(s){
   return Math.min(...string);
 }
 
+// sort into descending order
+function descendingOrder(number) {
+  return Number(number.toString().split('').sort((a,b) => b-a).join(''));
+}
