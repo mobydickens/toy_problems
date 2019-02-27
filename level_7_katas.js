@@ -125,3 +125,10 @@ function highAndLow(numbers){
   arr.push(max,min);
   return arr.join(" ");
 }
+
+// return shortest word in sentence (no empty strings)
+function findShort(s){
+  let string = s.split(" ").map(word => word.length);
+  return Math.min(...string);
+}
+
