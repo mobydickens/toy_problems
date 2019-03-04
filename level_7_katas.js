@@ -135,3 +135,34 @@ function findShort(s){
 function descendingOrder(number) {
   return Number(number.toString().split('').sort((a,b) => b-a).join(''));
 }
+
+// merge two arrays
+function mergeArrays(a, b) {
+  let mergedArray = [];
+  if(a.length > b.length) {
+    for(let i = 0; i<a.length; i++) {
+      if(a[i] !== undefined) {
+      mergedArray.push(a[i]);
+      }
+      if(b[i] !== undefined) {
+        mergedArray.push(b[i])
+      }
+    }
+  } else {
+    for(let i = 0; i<b.length; i++) {
+      if(a[i] !== undefined) {
+      mergedArray.push(a[i]);
+      }
+      if(b[i] !== undefined) {
+        mergedArray.push(b[i])
+      }
+    }
+  }
+  return mergedArray;
+}
+
+// square root
+var isSquare = function(n){
+  if(n%Math.sqrt(n)===0 || n === 0) return true
+  else return false;
+}

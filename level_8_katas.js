@@ -59,4 +59,17 @@ function sumMix(x){
   return x.reduce((a,b) => +a + +b);
 }
 
+// Even and odds
+function even_or_odd(number) {
+  if(number % 2 === 0) {
+    return "Even"
+  } else {
+    return "Odd"
+  }
+}
+
+// opposite
+function opposite(number) {
+  return number * -1;
+}
 
