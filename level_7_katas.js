@@ -184,3 +184,15 @@ function DNAStrand(dna){
   })
   return complimentary.join("");
 }
+
+
+// Jaden Casing Strings
+String.prototype.toJadenCase = function () {
+  let split = this.split(" ");
+  let mapped = split.map(word => {
+      let wordSplit = word.split("");
+      let mappedAgain = wordSplit.map((letter, i) => i === 0 ? letter.toUpperCase() : letter.toLowerCase());
+      return mappedAgain.join("");
+    });
+  return mapped.join(" ");
+};
