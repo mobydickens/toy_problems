@@ -166,3 +166,21 @@ var isSquare = function(n){
   if(n%Math.sqrt(n)===0 || n === 0) return true
   else return false;
 }
+
+// complimentary strings
+function DNAStrand(dna){
+  let complimentary = [];
+  let split = dna.toUpperCase().split("");
+  split.forEach(strand => {
+    if(strand === "A") {
+      complimentary.push("T");
+    } else if(strand === "T") {
+      complimentary.push("A");
+    } else if (strand === "C") {
+      complimentary.push("G");
+    } else {
+      complimentary.push("C");
+    }
+  })
+  return complimentary.join("");
+}
