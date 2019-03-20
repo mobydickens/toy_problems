@@ -62,3 +62,8 @@ TENNIS SCORING RULES
 5-3 => Winner Name
 4-4 => Deuce
    
+
+FIZZBUZZ REVIEW
+If number you speak is divisible by three, you say Fizz
+if the number you speak is divisible by 5 you say Buzz
+If number is divisible by BOTH, you say FizzBuzz
