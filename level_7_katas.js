@@ -196,3 +196,5 @@ String.prototype.toJadenCase = function () {
     });
   return mapped.join(" ");
 };
+
+
